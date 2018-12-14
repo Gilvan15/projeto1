@@ -5,7 +5,7 @@ import com.projeto.principal.entity.Usuario;
 
 
 public interface UserRepository extends JpaRepository<Usuario, Long> {
-	
+		
 	
 	
 }

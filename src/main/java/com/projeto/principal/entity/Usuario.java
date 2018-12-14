@@ -1,5 +1,7 @@
 package com.projeto.principal.entity;
 
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,6 +12,10 @@ public class Usuario {
 	private Long id;
 	private String name;
 	private String email;
+	
+	@ManyToMany
+	private Set<Role> roles;
+	
 	public Long getId() {
 		return id;
 	}
@@ -28,7 +34,4 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
-	
 }

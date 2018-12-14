@@ -21,8 +21,14 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		
 		criarUsuario("Cludionor Sila Medeiros", "claudiosm@gmail.com");
+		criarUsuario("Adriana REIS Mota", "adriana@gmail.com");
+		criarUsuario("Ikaro Dias Reis", "ikaro@teste.com.br");
+		System.out.println("itens salvos com sucesso!");
+			
+		Usuario usuario = userRepository.getOne(3L);
+		System.out.println(usuario.getName());
 		
-		System.out.println("Usuário Salvo!!!");
+		//System.out.println("teste novo!!");
 
 	}
 	

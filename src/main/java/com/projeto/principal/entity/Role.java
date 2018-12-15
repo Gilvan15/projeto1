@@ -2,17 +2,18 @@ package com.projeto.principal.entity;
 
 import javax.persistence.*;
 
-@Entity
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Role {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long Id;
+	private String Id;
 	private String name;
-	public Long getId() {
+	public String getId() {
 		return Id;
 	}
-	public void setId(Long id) {
+	public void setId(String id) {
 		Id = id;
 	}
 	public String getName() {

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import com.projeto.principal.entity.Usuario;
 import com.projeto.principal.repository.UserRepository;
 
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
@@ -25,10 +25,10 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		criarUsuario("Ikaro Dias Reis", "ikaro@teste.com.br");
 		System.out.println("itens salvos com sucesso!");
 			
-		Usuario usuario = userRepository.getOne(3L);
-		System.out.println(usuario.getName());
-		
-		//System.out.println("teste novo!!");
+		//Usuario user = userRepository.findByEmail("adriana@gmail.com");
+		//String nome =  user.getName();
+		//System.out.println(nome);
+				
 
 	}
 	
@@ -37,7 +37,6 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		userRepository.save(usuario);
 	}
 }
-
 
 /*
 List<Usuario> usuarios = userRepository.findAll();

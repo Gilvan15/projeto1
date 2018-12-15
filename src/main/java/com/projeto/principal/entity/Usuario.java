@@ -4,16 +4,17 @@ import java.util.Set;
 
 import javax.persistence.*;
 
-@Entity
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Usuario {
 	
 	@Id
-	@GeneratedValue(strategy =  GenerationType.AUTO)
-	private Long id;
+	private String id;
 	private String name;
 	private String email;
 	
-	@ManyToMany
+
 	private Set<Role> roles;
 			
 	public Usuario() {
@@ -25,10 +26,10 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getName() {
